@@ -5,9 +5,23 @@ export type SortingAlgorithmType =
   | "merge"
   | "quick";
 
-export type selectOptionsType = {
-  value: string;
+export type AlgorithmInfo = {
+  title: string;
+  description: string;
+  worstCase: string;
+  averageCase: string;
+  bestCase: string;
+};
+
+export type SortingAlgorithmsData = {
+  [key in SortingAlgorithmType]: AlgorithmInfo;
+};
+
+export type AnimateSpeedType = "slow" | "medium" | "fast" | "lighning";
+
+export type SelectOptionsType = {
   label: string;
+  value: string;
 };
 
 export type animationArrayType = [number[], boolean][];
